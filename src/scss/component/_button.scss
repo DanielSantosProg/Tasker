@@ -1,0 +1,39 @@
+.btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 32px;
+  width: 160px;
+  font-weight: bold;
+  text-transform: uppercase;
+
+  transition: 0.5s;
+
+  border: none;
+  cursor: pointer;
+
+  &.btn-primary {
+    color: var(--white);
+    background: var(--primary);
+
+    &:hover {
+      background: var(--primary-010);
+    }
+  }
+
+  &.btn-danger {
+    color: var(--white);
+    background: rgb(220, 34, 34);
+
+    &:hover {
+      background: rgb(165, 20, 20);
+    }
+  }
+
+  &.btn-primary,
+  &.btn-danger {
+    font-size: 16px;
+    border-radius: 5px;
+    padding: 10px 20px;
+  }
+}

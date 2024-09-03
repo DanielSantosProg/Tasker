@@ -1,0 +1,13 @@
+@if (data.length > 0) {
+<div class="lists-container">
+  <ul>
+    @for (list of data; track list.name) {
+    <li>
+      <div class="side-list">
+        <h4>{{ list.name }}</h4>
+      </div>
+    </li>
+    }
+  </ul>
+</div>
+}

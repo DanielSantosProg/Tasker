@@ -1,0 +1,10 @@
+.side-list-container {
+  width: 30%;
+  height: 93vh;
+  background: var(--black);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+  padding-top: 20px;
+}

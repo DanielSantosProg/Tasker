@@ -1,0 +1,16 @@
+.side-list {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  background-color: var(--primary-010);
+  color: var(--white);
+  padding: 0.1em 2em;
+  margin-bottom: 50px;
+  width: 100%;
+  border-radius: 5px;
+}
+
+.lists-container {
+  display: flex;
+  align-items: center;
+}

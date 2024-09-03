@@ -1,0 +1,29 @@
+.navbar {
+  display: flex;
+  height: 7vh;
+  flex-direction: row;
+  position: relative;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1;
+  padding: 0;
+  margin: 0 20px;
+
+  & ul {
+    display: flex;
+    gap: 5vh;
+
+    & li {
+      color: var(--white);
+      font-size: 3vh;
+
+      & span {
+        color: var(--primary-010);
+      }
+    }
+  }
+}
+
+.logo p {
+  font-size: 3vh;
+}
