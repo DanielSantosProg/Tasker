@@ -33,7 +33,7 @@ export class NewTaskComponent implements OnInit {
 
   fetchData() {
     this.httpClient
-      .get('http://localhost:5249/api/TaskList')
+      .get('https://localhost:5001/api/TaskList')
       .subscribe((data: any) => {
         console.log(data);
         this.data = data;
@@ -50,7 +50,7 @@ export class NewTaskComponent implements OnInit {
 
   createForm() {
     this.newtaskForm = this.fb.group({
-      dropdown: ['Default List', [Validators.required]],
+      dropdown: [null, [Validators.required]], // Set initial value to null for placeholder
       myLists: this.fb.array([]),
       taskName: ['', [Validators.minLength(1), Validators.maxLength(30)]],
       taskDescription: [''],

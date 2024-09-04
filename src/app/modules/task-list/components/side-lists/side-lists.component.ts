@@ -1,5 +1,5 @@
 import { JsonPipe } from '@angular/common';
-import { Component, Input } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-side-lists',
@@ -8,6 +8,16 @@ import { Component, Input } from '@angular/core';
   templateUrl: './side-lists.component.html',
   styleUrl: './side-lists.component.scss',
 })
-export class SideListsComponent {
+export class SideListsComponent implements OnInit {
   @Input() data: any[] = [];
+  ngOnInit(): void {
+    this.data.forEach((list) => {
+      list.isDropdownVisible = true;
+    });
+  }
+
+  isDropdownVisible: boolean = true;
+  public toggleDropdown(list: any) {
+    list.isDropdownVisible = !list.isDropdownVisible;
+  }
 }

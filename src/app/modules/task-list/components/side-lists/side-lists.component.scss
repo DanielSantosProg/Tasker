@@ -1,11 +1,13 @@
 .side-list {
   display: flex;
   align-items: center;
+  justify-content: center;
   flex-direction: column;
   background-color: var(--primary-010);
   color: var(--white);
-  padding: 0.1em 2em;
-  margin-bottom: 50px;
+  margin-top: 30px;
+  min-width: 250px;
+  max-width: 80%;
   width: 100%;
   border-radius: 5px;
 }
@@ -13,4 +15,47 @@
 .lists-container {
   display: flex;
   align-items: center;
+  justify-content: center;
+
+  ul {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  ul li {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+}
+
+.list-item {
+  background-color: var(--secondary-010);
+  width: 100%;
+}
+
+.list-item p {
+  padding: 10px;
+  font-weight: normal;
+}
+
+.toggle-button {
+  width: 100%;
+  background: none;
+  border: none;
+  padding: 10px;
+  font-size: 14px;
+  color: var(--white);
+  font-weight: bold;
+}
+
+.toggle-button:hover {
+  background-color: var(--secondary);
+  border-radius: 5px;
 }

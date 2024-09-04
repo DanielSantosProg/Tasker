@@ -4,7 +4,15 @@
     @for (list of data; track list.name) {
     <li>
       <div class="side-list">
-        <h4>{{ list.name }}</h4>
+        <button class="toggle-button" (click)="toggleDropdown(list)">
+          {{ list.name }}
+        </button>
+        @if (list.isDropdownVisible){ @for (items of list.tasks; let index =
+        $index; track items.id){
+        <div class="list-item">
+          <p>{{ items.name }}</p>
+        </div>
+        } }
       </div>
     </li>
     }
