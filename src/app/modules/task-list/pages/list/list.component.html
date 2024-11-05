@@ -1,3 +1,28 @@
-<div>
-  <h1>Teste</h1>
+@if (data.length > 0) {
+<div class="lists-container">
+  <h1>My Lists</h1>
+
+  <ul>
+    @for (list of data; track list.name) {
+    <li>
+      <div class="side-list">
+        <button class="toggle-button" (click)="toggleDropdown(list)">
+          {{ list.name }}
+        </button>
+        @if (list.isDropdownVisible){ @for (items of list.tasks; let index =
+        $index; track items.id){
+        <div class="list-item">
+          <p>{{ items.name }}</p>
+        </div>
+        } }
+      </div>
+    </li>
+    }
+  </ul>
 </div>
+} @if (data.length == 0) {
+<div class="lists-container">
+  <h1>My Lists</h1>
+  <p>No lists available</p>
+</div>
+}
